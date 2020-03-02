@@ -107,7 +107,12 @@ class Treat
 		{
 			return;
 		}
-		else if ((Math.abs(this.x - zippyX) < (2 * collisionDist) && Math.abs(this.y - zippyY) < (2 * collisionDist)) || this.isCloseToAnotherTreat())
+		else if ((Math.abs(this.x - zippyX) < (3 * collisionDist) && Math.abs(this.y - zippyY) < (3 * collisionDist)) || this.isCloseToAnotherTreat())
+		{
+			this.isLanded = true;
+			return;
+		}
+		else if (Math.abs(this.x - zippyX) > (2 * wt) || Math.abs(this.y - zippyY) > (2 * ht))
 		{
 			this.isLanded = true;
 			return;
